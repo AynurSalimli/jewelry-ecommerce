@@ -1,0 +1,52 @@
+@import "../../../../responsive/mixins";
+.grant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  gap: 20px;
+  width: 100%;
+  flex-direction: column;
+  height: 1200px;
+  flex-direction: column;
+  @include mobile {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding-top: 300px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 calc(33.33% - 20px);
+    width: 250px;
+    gap: 10px;
+    @include mobile {
+      height: 300px;
+      gap: 30px;
+    }
+    h2 {
+      font-family: var(--title-font);
+    }
+    img {
+      width: 280px;
+      border-radius: 50%;
+      height: 280px;
+      @include mobile {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    p {
+      text-align: center;
+      width: 250px;
+      font-family: var(--desc-font);
+      font-size: 14px;
+      @include mobile {
+        width: 250px;
+      }
+    }
+  }
+}

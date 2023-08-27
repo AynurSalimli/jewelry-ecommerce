@@ -1,0 +1,28 @@
+.damaged {
+  padding-top: 100px;
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--title-font);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    li {
+      p:nth-child(1) {
+        padding: 20px  180px 10px;
+        font-family: var(--title-font);
+        font-size: 25px;
+        font-weight: 500;
+      }
+      p:nth-child(2) {
+        padding: 15px 180px;
+        font-family: var(--desc-font);
+      }
+    }
+  }
+}

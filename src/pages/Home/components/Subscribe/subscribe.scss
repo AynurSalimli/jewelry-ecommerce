@@ -1,0 +1,80 @@
+@import "../../../../responsive/mixins";
+.subscribe {
+  position: relative;
+  top: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/BANNER-GEMSTONE-COLLECTION.png?v=1680893356");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--light-color);
+    z-index: 1;
+    span {
+      font-size: 36px;
+      font-family: var(--title-font);
+      font-weight: 500;
+    }
+    p {
+      font-family: var(--desc-font);
+    }
+    &--input {
+      display: flex;
+      width: 700px;
+      padding: 20px;
+      background-color: transparent;
+      border: 1px solid var(--light-color);
+      outline: none;
+      justify-content: space-between;
+      color: var(--light-color);
+      @include mobile{
+        width: 300px;
+      }
+      .svg-email {
+        fill: var(--light-color);
+      }
+      .svg-submit {
+        fill: var(--light-color);
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: flex;
+        position: relative;
+        right: 200px;
+        color: var(--light-color);
+        justify-content: center;
+        align-items: center;
+        &::placeholder {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @include tablet{
+          right: 10px;
+        }
+      }
+    }
+  }
+}

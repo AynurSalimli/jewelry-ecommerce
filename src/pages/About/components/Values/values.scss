@@ -1,0 +1,20 @@
+.values{
+    height: 400px;
+    background-color: #fcf9f3;
+    display:flex;
+    justify-content: center;
+    margin: 40px 0;
+    align-items: center;
+    flex-direction: column;
+    &__title{
+        padding-bottom: 30px;
+        font-family: var(--title-font);
+        color: #ff6f2e;
+    }
+    &__text{
+        font-size: 24px;
+        font-weight: 500;
+        width: 800px;
+        font-family: var(--desc-font);
+    }
+}

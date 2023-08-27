@@ -1,0 +1,23 @@
+.shipping{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    gap: 70px;
+    &--product{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+       &__title{
+        font-family: var(--title-font);
+       }
+       &__desc{
+        font-family: var(--desc-font);
+        color: #555;
+       }
+    }
+}

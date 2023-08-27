@@ -1,0 +1,168 @@
+@import "../../../src/responsive/mixins";
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: var(--light-color);
+  position: fixed;
+  z-index: 99999;
+  &__right {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    @include mobile {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      width: 90%;
+      width: 0px;
+      height: calc(100vh);
+      transition: all 0.3s ease-in;
+      overflow: hidden;
+    }
+    &.active {
+      @include mobile {
+        width: 270px;
+        flex-direction: column;
+        padding-bottom: 200px;
+      }
+    }
+  }
+  .menu-icon {
+    display: none;
+    @include mobile {
+      display: block;
+      right: 20px;
+      position: absolute;
+      top: 20px;
+      cursor: pointer;
+    }
+  }
+  &__logo {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 30px;
+    width: 30%;
+    a {
+      color: var(--dark-color);
+    }
+  }
+  &__menu {
+    &--elements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      font-size: 12px;
+      font-family: var(--desc-font);
+      @include mobile {
+        flex-direction: column;
+        font-size: 20px;
+      }
+      a {
+        color: var(--dark-color);
+        &:hover {
+          color: var(--brown-color);
+          transition: 0.4s;
+        }
+      }
+      &--shop {
+        &:hover {
+          .header__menu--dropdown {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    &--dropdown {
+      display: none;
+      position: absolute;
+      left: -75%;
+      top: 17px;
+      background-color: var(--light-color);
+      width: 750px;
+      height: 260px;
+
+      .see-all {
+        padding-left: 15px;
+        padding-top: -100px;
+        width: 100%;
+        display: flex;
+        button {
+          width: 120px;
+          height: 50px;
+          outline: none;
+          position: relative;
+          z-index: 5;
+          border: none;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0.2em;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-family: var(--desc-font);
+          background-color: var(--brown-color);
+          color: var(--light-color);
+          cursor: pointer;
+        }
+      }
+      .dropdownelements {
+        display: flex;
+      }
+      &--title {
+        padding: 20px 20px 0;
+        margin-bottom: 10px;
+        font-family: var(--title-font);
+        font-weight: 500;
+        a {
+          padding-bottom: 10px;
+        }
+      }
+      &--desc {
+        display: flex;
+        font-weight: 500;
+        font-family: var(--desc-font);
+        a {
+          padding-bottom: 5px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include mobile {
+      padding: 20px;
+    }
+    svg {
+      width: 20px;
+      cursor: pointer;
+      color: var(--dark-color);
+      &:hover {
+        color: var(--brown-color);
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+.dropdown--title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,139 @@
+@import "../../../../responsive/mixins";
+.collections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  @include desktop{
+    width: 100%
+  }
+  @include mobile{
+    display: none;
+  }
+  h2 {
+    padding-bottom: 20px;
+    font-family: var(--desc-font);
+    text-transform: uppercase;
+    line-height: 0.2em;
+    font-size: 14px;
+  }
+  &__items {
+    display: grid;
+    font-family: var(--title-font);
+    font-size: 20px;
+    font-weight: 600;
+    gap: 15px;
+    @include desktop {
+      justify-items: center;
+      gap: 5px;
+    }
+
+    a {
+      font-size: 30px;
+      z-index: 3;
+      color: var(--light-color);
+      &:hover {
+        padding-bottom: 40px;
+        transition: 0.5s;
+        font-size: 35px;
+      }
+    }
+    & > div {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+    }
+    &--rings {
+      grid-column: 1 / 3;
+      grid-row: 1 / 4;
+      padding-right: 10px;
+      background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/leeorwild-wolfcircus-281_1024x_84978645-a1e4-42db-beaf-a0ed355d22cf.jpg?v=1680891916&width=720");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 670px;
+      object-fit: cover;
+      overflow: hidden;
+      @include desktop {
+        width: 450px;
+        height: 500px;
+      }
+      @include tablet{
+        width: 370px;
+      }
+    }
+
+    &--earrings {
+      grid-column: 3 / 5;
+      grid-row: 1;
+      background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/c3.jpg?v=1680892379&width=720");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 600px;
+      height: 360px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+      @include desktop {
+        width: 450px;
+        height: 250px;
+      }
+      @include tablet{
+        width: 370px;
+      }
+    }
+    &--necklaces {
+      background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/i10.jpg?v=1681100388&width=360");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 295px;
+      width: 300px;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include desktop {
+        height: 245px;
+        width: 250px;
+      }
+      @include tablet{
+        width: 180px;
+      }
+    }
+    &--bracelets {
+      background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/x2.jpg?v=1681147803&width=360");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 295px;
+      width: 285px;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include desktop {
+        height: 245px;
+        width: 250px;
+      }
+       @include tablet{
+        width: 180px;
+      }
+    }
+  }
+}

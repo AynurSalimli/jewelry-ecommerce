@@ -1,0 +1,73 @@
+@import "../../../../responsive/mixins";
+
+.ethical {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+  background-image: url("https://cdn.shopify.com/s/files/1/0748/1612/7275/files/goldcollection.png?v=1680893356");
+  background-position: center center;
+  @include tablet {
+    height: 450px;
+    margin-top: 15px;
+
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 33;
+    background-color: var(--dark-color);
+    opacity: 0.3;
+  }
+  &--text {
+    z-index: 999;
+    position: relative;
+    padding: 200px 200px;
+    color: var(--light-color);
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include tablet{
+      padding: 100px;
+    }
+    &__title {
+      font-family: var(--desc-font);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+    h2 {
+      font-family: var(--title-font);
+      font-size: 60px;
+      font-weight: 400;
+      @include tablet{
+        font-size: 40px;
+      }
+    }
+    &__desc {
+      font-family: var(--desc-font);
+      font-size: 12px;
+    }
+    button {
+      width: 140px;
+      height: 50px;
+      text-transform: uppercase;
+      color: var(--brown-color);
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--brown-color);
+        color: #fff;
+        transition: 0.5s;
+      }
+    }
+  }
+}

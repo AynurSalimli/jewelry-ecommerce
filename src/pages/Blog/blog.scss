@@ -1,0 +1,406 @@
+@import '../../responsive/mixins';
+.allblogs {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .blog {
+    display: flex;
+    align-items: start;
+    padding-top: 40px;
+    gap: 30px;
+    @include mobile{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 350px;
+    }
+    &__left {
+      &--image {
+        width: 585px;
+        height: 330px;
+        @include mobile{
+          width: 350px;
+          height: 202px;
+        }
+      }
+    }
+    &__right {
+      width: 530px;
+      @include mobile{
+        width: 350px;
+      }
+      &--jewelry {
+        padding-bottom: 10px;
+        font-family: var(--desc-font);
+        font-size: 12px;
+      }
+      &--name {
+        font-family: var(--title-font);
+        font-weight: 500;
+        padding-bottom: 30px;
+        font-size: 30px;
+        @include mobile{
+          font-size: 20px;
+        }
+      }
+      &--desc {
+        padding-bottom: 30px;
+
+        font-family: var(--desc-font);
+        color: #555;
+        font-size: 14px;
+        width: 530px;
+        line-height: 1.8;
+        @include mobile{
+          width: 350px;
+        }
+      }
+      &--more {
+        display: inline-block;
+        width: auto;
+        text-decoration: none !important;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        cursor: pointer;
+        letter-spacing: 0.2em;
+        line-height: 1;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: var(--desc-font);
+        color: var(--light-color);
+        background-color: var(--brown-color);
+        padding: 0.7rem 1rem !important;
+      }
+    }
+  }
+}
+
+.singleblog {
+  &--image {
+    &--img {
+      width: 100%;
+      object-fit: cover;
+      height: 500px;
+      position: relative;
+    }
+    
+  }
+  &--text {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--light-color);
+    gap: 15px;
+    z-index: 3;
+   @include mobile{
+    left: 50px;
+   }
+    &--title {
+      font-family: var(--title-font);
+    }
+    &--desc {
+      display: flex;
+      gap: 10px;
+      font-family: var(--desc-font);
+      font-size: 12px;
+    }
+  }
+  &--words {
+    display: flex;
+    justify-content: center;
+    font-family: var(--desc-font);
+    font-size: 14px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    &--first {
+      display: flex;
+      justify-content: center;
+      width: 800px;
+      padding: 40px 0;
+      align-items: center;
+      line-height: 1.8;
+      @include mobile{
+        width: 350px;
+        padding: 20px;
+        
+      }
+    }
+    &--second {
+      display: flex;
+      align-items: flex-start;
+      width: 53%;
+      font-family: var(--title-font);
+      font-size: 25px;
+      font-weight: 500;
+      @include mobile{
+        width: 100%;
+        padding-left: 20px;
+      }
+    }
+    &--third {
+      width: 800px;
+      line-height: 1.8;
+      padding-top: 30px;
+      @include mobile{
+          width: 350px;
+        }
+    }
+  }
+  &--like {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    font-family: var(--title-font);
+    font-size: 30px;
+    &--item {
+      img {
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+        @include mobile{
+          width: 350px;
+          height: 350px;
+
+        }
+      }
+    }
+  }
+  &--social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 520px;
+    border-top: 1px solid #dee2e6 !important;
+    border-bottom: 1px solid #dee2e6 !important;
+
+    font-family: var(--desc-font);
+    padding: 40px;
+    @include mobile{
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      &--name {
+        font-size: 14px;
+      }
+    }
+    &__right {
+      display: flex;
+      gap: 10px;
+      &--item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        color: #555;
+        i {
+          color: var(--dark-color);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &--comments {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    padding: 30px 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+
+    h2 {
+      font-family: var(--title-font);
+      font-size: 30px;
+    }
+    p {
+      padding: 10px 0;
+      font-family: var(--desc-font);
+      font-size: 14px;
+      @include mobile{
+        text-align: center;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 20px;
+      width: 700px;
+      button {
+        border: none;
+        width: 200px;
+        height: 50px;
+        background-color: var(--brown-color);
+        text-transform: uppercase;
+        color: var(--light-color);
+        font-family: var(--desc-font);
+        line-height: 1.8;
+        cursor: pointer;
+        @include mobile{
+          width: 100px;
+        }
+      }
+    }
+    &--mail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      input {
+        font-family: var(--desc-font);
+        border: 1px solid #dee2e6;
+        width: 340px;
+        height: 50px;
+        padding-left: 10px;
+        outline: none;
+      }
+    }
+    &--comment {
+      textarea {
+        outline: none;
+        border: 1px solid #dee2e6;
+        width: 700px;
+        padding-left: 10px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        resize: vertical;
+        font-family: var(--desc-font);
+        height: 150px;
+      }
+    }
+  }
+}
+
+//like
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    font-family: var(--title-font);
+    font-size: 35px;
+    padding: 40px 0;
+    @include mobile{
+      font-size: 25px;
+    }
+  }
+  &__posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    @include mobile{
+      flex-direction: column;
+    }
+    &--items {
+      position: relative;
+      width: 370px;
+      height: 370px;
+      @include mobile{
+          width: 350px;
+          height: 350px;
+        }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      img {
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+        @include mobile{
+          width: 350px;
+          height: 350px;
+        }
+      }
+      & > p {
+        position: relative;
+        color: var(--light-color);
+      }
+      &--name {
+        top: -90px;
+        left: 20px;
+        font-size: 22px;
+        font-family: var(--title-font);
+        width: 300px;
+      }
+      &--date {
+        top: -100px;
+        left: 20px;
+        font-size: 12px;
+        font-family: var(--desc-font);
+        width: 300px;
+        i {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+.writecomment{
+  border: none;
+        width: 200px;
+        height: 50px;
+        background-color: var(--brown-color);
+        text-transform: uppercase;
+        color: var(--light-color);
+        font-family: var(--desc-font);
+        line-height: 1.8;
+        cursor: pointer;
+}
+
+.singleblog--comments--comment{
+  width: 650px;
+  @include mobile{
+    width: 350px;
+  }
+  .single-comment{
+    padding-bottom: 10px;
+    hr{
+      margin-bottom: 5px;
+    }
+    &-top{
+      display: flex;
+      gap: 10px;
+      img{
+        border-radius: 100%;
+      }
+    }
+    &-bottom{
+      padding-left: 40px;
+    }
+  }
+}
+
+.buttons--comment{
+  gap: 10px;
+  display: flex;
+}

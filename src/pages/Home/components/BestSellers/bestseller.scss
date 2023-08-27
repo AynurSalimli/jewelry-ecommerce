@@ -1,0 +1,52 @@
+.sellers {
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px 0;
+    h1 {
+      font-family: var(--title-font);
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+    &--desc {
+      font-size: 14px;
+      font-family: var(--desc-font);
+    }
+  }
+  &__products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .mySwiper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 50px;
+      height: 350px;
+    }
+  }
+}
+
+
+.best {
+  color: var(--dark-color);
+  height: 320px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  img {
+    width: 285px;
+  }
+  &__name {
+    font-family: var(--title-font);
+  }
+  &__price {
+    font-family: var(--desc-font);
+    font-size: 14px;
+  }
+}
